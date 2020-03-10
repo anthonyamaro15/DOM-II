@@ -42,7 +42,6 @@ img1.addEventListener("mouseenter", () => {
 
 img1.addEventListener("mouseleave", () => {
   img1.style.transform = "scale(1,1)";
-  console.log("mause leaving");
 });
 
 body.addEventListener("keydown", () => {
