@@ -21,7 +21,7 @@ function navLinks(e) {
   e.preventDefault();
   e.stopPropagation();
 }
-
+/// event listeners
 logoH1.addEventListener("mouseover", () => {
   logoH1.style.color = "red";
 });
