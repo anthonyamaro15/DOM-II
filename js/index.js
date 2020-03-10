@@ -9,6 +9,14 @@ const img1 = document.querySelector(".intro img");
 const img2 = document.querySelectorAll(".img-content img");
 const destination = document.querySelectorAll(".destination");
 
+gsap.from(".nav-link", {
+  duration: 1,
+  opacity: 0,
+  delay: 0.3,
+  y: -100,
+  stagger: 0.25
+});
+
 function navLinks(e) {
   e.preventDefault();
   e.stopPropagation();
@@ -30,7 +38,6 @@ intro.addEventListener("mouseout", () => {
 
 img1.addEventListener("mouseenter", () => {
   img1.style.transform = "scale(1.2, 1.2)";
-  console.log("does it work?");
 });
 
 img1.addEventListener("mouseleave", () => {
@@ -40,12 +47,10 @@ img1.addEventListener("mouseleave", () => {
 
 body.addEventListener("keydown", () => {
   body.style.backgroundColor = randomColor();
-  console.log("pressed key");
 });
 
 img2.forEach(im => {
-  im.addEventListener("dblclick", e => {
-    console.log(e);
+  im.addEventListener("dblclick", () => {
     im.style.transform = "scale(1.3)";
   });
 });
